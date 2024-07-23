@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>tazos en venta</title>
+				<link rel="shortcut icon" href="coco.ico">
+			
+			
+	<style>
+	
+html {
+  height: 100%;
+
+}
+
+body {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding:0;
+  font-family: sans-serif;
+  background: #141e30;
+}	
+
+	
+h2 {
+  margin: 0 0 15px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.tablita{
+	width: 680px;
+	height: 615x;
+	padding: 30px;
+	font-size: 20px;
+	background: #030611;
+	border-radius: 25px;
+	box-shadow: 15px 15px 25px rgba(46, 54 , 68, 100);
+}	
+
+th{
+	color: #fff;
+	font-weight: bold;
+}
+
+td{
+	color: #fff;
+	padding-left: 12px;
+	padding: 4px;
+	
+}
+
+input{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	padding: 2px;
+	border-radius: 3px;
+	background-color: #ffffff17;
+	font-size: 15px;
+	color: white;
+	letter-spacing: 1px
+	
+}
+
+textarea{
+	margin-top: 10px;
+	border-radius: 5px;
+	font-size: 15px;
+	letter-spacing: 7px
+	font-family: sans-serif;
+	font-family: sans-serif;
+}
+
+	</style>
+		
+	<body><center>
+	
+		<div class= "tablita">
+		
+			<form method="post" action="Pagina.php" name="f1" id="f1">
+			
+				<h2>compra-venta de tazos&nbsp;&nbsp;<img src="miel.png" width="50"></h2> <br>
+				
+					<table border=1 WIDTH="620" style="border-collapse: collapse"> 
+					
+						<tr>
+							<th colspan="2" align="center">
+								Informacion del producto
+							</th>
+						</tr>
+						
+						<tr>
+							<td align="center">	
+								Nombre del producto:
+							</td>	
+							
+							<td align="left">
+								&nbsp;<input type ="text" name="nombreprod" id="nombreprodu" value="">
+									&nbsp;<font color="red" title="Campo obligatorio">*
+							</td>	
+						</tr>
+							
+						<tr>
+							<td align="center">
+								Codigo de serie:
+							</td>
+								
+							<td align="left">
+								&nbsp;<input type ="text" name="codigo" id="codigo" value="" onblur="codigo()">
+									&nbsp;<font color="red" title="Campo obligatorio">*
+							</td>
+						</tr>
+						
+						<tr>
+							<td align="center">
+								Año de fabricacón:
+							</td>
+								
+							<td align="left">
+								&nbsp;<input type="number"  id="precio" name="precio">
+									&nbsp;<font color="red" title="Campo obligatorio">*
+							</td>
+						</tr>
+							
+						<tr>
+							<td align="center">
+								Tipo de diseño:
+							</td>
+								
+							<td align="left">
+							
+								&nbsp;&nbsp;&nbsp;<select name="diseno" id="diseno">
+														<option>Rustico</option>
+														<option>Vintage</option>
+														<option>Minimalista</option>
+														<option>Clasico</option>
+														<option>Moderno</option>
+													</select>
+							
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+								Paleta de colores a elegir: 
+							</td>
+							
+							<td>
+							
+								<ul>
+									<li>
+										<input type="checkbox" name="color" id="color" value="">
+											&nbsp;Cafe, blanco, rosa palido, gris
+									</li>
+								</ul>
+								
+								<ul>
+									<li>
+										<input type="checkbox" name="colorRO" id="colorRO" value="">
+											&nbsp;Rojo, celeste, naranja, negro
+									</li>
+								</ul>
+								
+								<ul>
+									<li>
+										<input type="checkbox" name="colorAMA" id="color AMA" value="">
+											&nbsp;Amarillo, azul palido, morado palido, blanco
+									</li>
+								</ul>
+								
+							</td>
+								
+						</tr>
+							
+						<tr>
+							<td align="center">
+								Precio:
+							</td>
+								
+							<td align="left">
+								&nbsp;<input type="number" min="1" max="4000" step="1" id="precio" name="precio">
+									&nbsp;<font color="red" title="Campo obligatorio">*
+							</td>
+						</tr>
+							
+					</table><br><br>
+					
+					<table border=1 WIDTH="620" style="border-collapse: collapse"> 
+						<tr>
+							<th colspan="2" align="center">
+								Datos personales
+							</th>
+						</tr>
+						
+						<tr>
+							<td align="center">
+								Nombre(s):&nbsp;
+							</td>
+							
+							<td align="left">
+								&nbsp;<input type ="text" name="nombre" id="nombre" value="" onblur="nnn()">
+									&nbsp;<font color="red" title="Campo obligatorio">*
+							</td>
+						</tr>
+						
+						<tr>
+							<td align="center">
+								Apellidos(s):&nbsp;
+							</td>
+							
+							<td align="left">
+								&nbsp;<input type ="text" name="direccion" id="direccion" value="">
+									&nbsp;<font color="red" title="Campo obligatorio">*
+							</td>
+						
+						</tr>
+						
+						<tr>
+							<td align="center">
+									Sexo:&nbsp;
+								
+							</td>
+							
+							<td align="left">
+								&nbsp;<input type="radio" name="sexo" id="sexo" value="M">
+									&nbsp;Masculino &nbsp;
+									
+								&nbsp;<input type="radio" name="sexo" id="sexo" value="F">
+									&nbsp;Femenino&nbsp;
+									
+								&nbsp;<input type="radio" name="sexo" id="sexo" value="F">
+									&nbsp;bichota
+									
+									&nbsp;&nbsp;Otro:
+								&nbsp;<textarea id="otro" name="otro=">  </textarea>
+									 		
+							</td>
+						</tr>
+						
+						<tr>
+							<td align="center">
+								Edad:
+							</td>
+							<td>
+								&nbsp;&nbsp;<input type="number" min="1" max="115" step="1" id="edad" name="edad">
+							</td>
+						</tr>
+
+								
+						
+						<tr>				
+							<td align="center">
+								Fecha de nacimiento:&nbsp;
+							</td>
+							
+							<td>
+								&nbsp;&nbsp;Dia&nbsp;
+									<select name="dia" id="dia">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>31</option>
+									</select>
+								
+								&nbsp;&nbsp;Mes&nbsp;
+									<select name="mes" id="mes">
+										<option>Enero</option>
+										<option>Febrero</option>
+										<option>Marzo</option>
+										<option>Abril</option>
+										<option>Mayo</option>
+										<option>Abril</option>
+										<option>Junio</option>
+										<option>Julio</option>
+										<option>Agosto</option>
+										<option>Septiembre</option>
+										<option>Octubre</option>
+										<option>Noviembre</option>
+										<option>Diciembre</option>
+									</select>
+									
+								&nbsp;Año&nbsp;
+									<select name="mes" id="mes">
+										<option>400 a.c.</option>
+										<option>5897</option>
+										<option>2020</option>
+										<option>2005</option>
+										<option>2305</option>
+										<option>2 a.c.</option>
+										<option>546 a.c.</option>
+										<option>2030</option>
+										<option>2006</option>
+										<option>2004</option>
+										<option>2100</option>
+										<option>1579</option>
+										<option>1469</option>
+									</select>
+							</td>
+						</tr>
+						
+					</table><br><br>
+					
+					<table border=1 WIDTH="620" style="border-collapse: collapse"> 
+						
+						<tr>
+							<th colspan="2" align="center">
+								Informacion de contacto
+							</th>
+						</tr>
+					
+						<tr>
+							<td align="center">
+								Número de celular:&nbsp;
+							</td>
+							
+							<td align="left">
+								&nbsp;<input type ="tel" name="tel" id="tel" value="" onblur="num()">
+									&nbsp;<font color="red" title="Campo obligatorio">*
+							</td>
+						</tr>
+						
+						<tr>
+							<td align="center">
+								Email:&nbsp;
+							</td>
+							
+							<td align="left">
+								&nbsp;<input type ="text" name="jimein" id="jimein" value="" maxlength="50" onblur="email1()">
+									&nbsp;<font color="red" title="Campo obligatorio">*
+							</td>
+						</tr>
+						
+						<tr>				
+							<td align="center">
+								<font  >
+									Ciudad:&nbsp;
+								
+							</td>
+							
+							<td align="left">
+									&nbsp;&nbsp;<select name="ciudad" id="ciudad">
+										<option>Mexico</option>
+										<option>Narnia</option>
+										<option>Piltover</option>
+										<option>Muy muy lejano</option>
+										<option>Corea</option>
+										<option>Tlaxcala</option>
+										<option>Luna</option>
+										<option>Jupiter</option>
+										<option>Bajo un puente</option>
+										<option>Brasil</option>
+						
+									</select>
+							</td>
+						</tr>
+						
+						<tr>
+							<td align="center">
+								Calle&nbsp;
+							</td>
+							
+							<td align="left">
+								&nbsp;<input type ="text" name="direccion" id="direccion" value="">
+									&nbsp;<font color="red" title="Campo obligatorio">*
+									
+							</td>
+						</tr>	
+
+						<tr>
+							<td align="center">
+								Numero:
+							</td>
+							<td>
+								&nbsp;&nbsp;<input type="number" min="1" max="4000" step="1" id="numero" name="numero">
+							</td>
+						</tr>				
+						
+					</table><br>
+					
+						<input type="reset" value="Borrar" id="btn.borrar" name="btn.borrar">&nbsp;&nbsp;&nbsp;
+								<img src="miel.png" width="50">
+						&nbsp;&nbsp;<input type="submit" value="Grabar" id="btn.grabar" name="btn.grabar">
+					
+			</form>
+			
+		</div> 	
+		
+				<font face="Courier" size="5" color="#fff"><p align="right">Concha</p>
+				
+	</body>
+</html>	
+
+	<script>
+
+		function email1(){
+			var correo=document.f1.jimein.value;
+					
+				if ((correo.indexOf(".")==-1)||(correo.indexOf("@")==-1)||(correo.length<10)){
+					alert("escribelo bien");
+				}
+		}
+		
+		function num(){
+			var cel=document.f1.tel.value;
+					
+				if (cel.length==9){
+					alert("le falta numeros");
+				}
+		}
+		
+		function nnn(){
+			var nom=document.f1.nombre.value;
+					
+				if (nom.length<2){
+					alert("dudo mucho que tu nombre tenga una sola letra");
+				}
+		}
+		
+		function
+
+	</script>
